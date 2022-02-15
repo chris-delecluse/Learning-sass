@@ -1,0 +1,6 @@
+@mixin flexPos($display, $flexDir, $justifyC, $alignI) {
+    display: $display;
+    flex-direction: $flexDir;
+    justify-content: $justifyC;
+    align-items: $alignI;
+}
