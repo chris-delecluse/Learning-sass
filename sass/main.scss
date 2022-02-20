@@ -23,19 +23,17 @@ body {
         background: url(../assets/la-vie-en-rose.jpeg);
         background-size: cover;
         background-repeat: no-repeat;
-        transition: 0.9s ease-out;
     }    
 
     .text {
         width: 100%;
-        height: 26%;
+        height: 40%;
         padding: 35px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         background-color: #FFF;
-        transition: 0.9s ease-out;
-        position: relative;
-        
+        transition: 0.3s ease-out;        
         .title {
 
             h1 {
@@ -57,15 +55,12 @@ body {
         }
         
         .foot {
-            width: 80%;
-            position: absolute;
-            bottom: 35px;
-            left: 35px;
-
+            transform: translateY(-80px);
+            
             ul {
                 display: flex;
             }
-
+            
             li {
                 width: 40%;
             }
@@ -73,22 +68,24 @@ body {
     }
 
     &:hover {
-        .text {
-            height: 200px;
-        }
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.363);
+
         .image {
             transform: scale(1.15);
-            transition: 0.9s ease;
         }
 
         .main {
-            transform: translateY(20px);
+            transform: translateY(0);
             display: block;
         }
 
         .text {
             z-index: 999;
             transform: translateY(-30%);
+        }
+
+        .foot {
+            transform: translateY(0);
         }
     }
 }
